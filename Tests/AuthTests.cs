@@ -13,7 +13,7 @@ namespace Kpi_Lab5.Tests
             p.Login("wrong", "wrong");
             Assert.IsTrue(p.FlashText().ToLower().Contains("invalid"), "Очікується помилка при неправильних даних.");
 
-            p.Login("tomsmith", "SuperSecretPassword!");
+            p.Login("firstnamelastname", "Super_Secret_Password!");
             Assert.IsTrue(p.FlashText().ToLower().Contains("secure area") || driver.Url.Contains("/secure"), "Після логіну очікується успіх.");
 
             p.Logout();
